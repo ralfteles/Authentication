@@ -17,13 +17,11 @@ namespace AuthorizationToken.Controllers
     {
         private FuncionarioDBContext db = new FuncionarioDBContext();
 
-        // GET: api/Funcionario
         public IQueryable<Funcionario> GetFuncionarios()
         {
             return db.Funcionarios;
         }
 
-        // GET: api/Funcionario/5
         [ResponseType(typeof(Funcionario))]
         public IHttpActionResult GetFuncionario(int id)
         {
@@ -36,7 +34,6 @@ namespace AuthorizationToken.Controllers
             return Ok(funcionario);
         }
 
-        // PUT: api/Funcionario/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutFuncionario(int id, Funcionario funcionario)
         {
