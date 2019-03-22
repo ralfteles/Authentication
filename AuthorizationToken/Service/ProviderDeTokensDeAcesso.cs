@@ -31,6 +31,5 @@ namespace AuthorizationToken.Service
                 return;
             }
         }
-
     }
 }
